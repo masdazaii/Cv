@@ -1,57 +1,51 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import React,{Component} from 'react';
+import { Menu, Segment } from 'semantic-ui-react'
 
 import {Link} from "react-router-dom";
-import '../App.css';
 
-const styles = {
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-};
 
-function MyAppBar(props) {
-    const {classes} = props;
-    return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <div className="position">
-                    <Toolbar display="flex">
-                        <Link to='/home'>
-                            <Button>Home</Button>
-                        </Link>
-                        <Link to='/profile'>
-                            <Button>Profile</Button>
-                        </Link>
-                        <Link to='/portofolio'>
-                            <Button>Portofolio</Button>
-                        </Link>
-                        <Link to='/contact'>
-                            <Button>Contact</Button>
-                        </Link>
-                    </Toolbar>
-               </div>
-            </AppBar>
-        </div>
-    );
+class MyAppBar extends Component{
+    state = { activeItem: 'home' }
+
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+    render() {
+        const { activeItem } = this.state
+
+        return (
+        <Segment inverted>
+            <Menu inverted pointing secondary>
+            <Link to='/home'>
+            <Menu.Item 
+                name='home' 
+                active={activeItem === 'home'} 
+                onClick={this.handleItemClick} />
+            </Link>
+            <Link to='/profile'>
+            <Menu.Item
+                name='profile'
+                active={activeItem === 'profile'}
+                onClick={this.handleItemClick}
+            />
+             </Link>
+             <Link to='/portofolio'>
+            <Menu.Item
+                name='portofolio'
+                active={activeItem === 'portofolio'}
+                onClick={this.handleItemClick}
+            />
+            </Link>
+            <Link to='/contact'>
+            <Menu.Item
+                name='contact'
+                active={activeItem === 'contact'}
+                onClick={this.handleItemClick}
+            />
+            </Link>
+            </Menu>
+        </Segment>
+        )
+    }
 }
 
-MyAppBar.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(MyAppBar);
+export default MyAppBar;

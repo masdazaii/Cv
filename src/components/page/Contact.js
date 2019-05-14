@@ -1,47 +1,68 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-
-const styles = theme => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing.unit * 2,
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-});
-
-
+import { Container, Header } from 'semantic-ui-react'
+import {
+    Button,
+    Grid,
+    Icon,
+    Image,
+    Item,
+    Label,
+    Menu,
+    Segment,
+    Step,
+    Table,
+  } from 'semantic-ui-react'
 
 class Contact extends React.Component{
-    
     render(){
-        const { classes } = props;
         return(
-            <div className={classes.root}>
-                <Grid container spacing={24}>
-                    <Grid item xs>
-                        <Paper className={classes.paper}>xs</Paper>
+            <div className="bungkusContact">
+                <Container fluid>  
+                    <Header as='h1'>Silahkan berikan pendapat anda mengenai saya</Header>
+                    <p>
+                        Saran,kritik dan masukan anda akan 
+                        sangat membantu saya agar menjadi lebih baik lagi untuk kedepanya, Terima kasih
+                    </p>
+                </Container>
+                <Container>
+                    <Grid columns={2} stackable>
+                        <Grid.Row columns={3}>
+                            <Grid.Column>
+                            <Button icon labelPosition='left'>
+                                <Icon name='instagram' />
+                                    Masdazai_
+                            </Button>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Button icon labelPosition='left'>
+                                    <Icon name='facebook' />
+                                        Anggit Prayoga
+                                </Button>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Button icon labelPosition='left'>
+                                    <Icon name='twitter' />
+                                        Masdazai_
+                                </Button>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Column width={10}>
+                            <Button icon labelPosition='left'>
+                                <Icon name='mail' />
+                                    Anggitp07@gmail.com
+                            </Button>
+                        </Grid.Column>
+                        <Grid.Column width={6}>
+                            <Button icon labelPosition='left'>
+                                <Icon name='github' />
+                                    masdazaii
+                            </Button>
+                        </Grid.Column>
                     </Grid>
-                    <Grid item xs={6}>
-                        <Paper className={classes.paper}>xs=6</Paper>
-                    </Grid>
-                    <Grid item xs>
-                        <Paper className={classes.paper}>xs</Paper>
-                    </Grid>
-                </Grid>
+                </Container>
             </div>
-            
         )
     }
 }
 
-Contact.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
-
-export default withStyles(styles) (Contact);
+export default Contact;

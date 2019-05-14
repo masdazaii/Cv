@@ -16,3 +16,39 @@
   align-items: inherit;
   margin-left: 35%;
 }
+
+.ui.segment{
+  text-align:center;
+  display: inline-block;
+}
+
+.ui.stackable.two.column.grid{
+  text-align:center;
+  display: inline-block;
+  margin-top: 2%;
+  margin-left: 12%;
+}
+
+.ui.inverted.segment{
+  width:100%;
+}
+
+.ui.inverted.pointing.secondary.menu{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui.fluid.container{
+  text-align:center;
+  display: inline-block;
+}
+
+.ui.container{
+  align-items: center;
+  justify-content: center;
+}
+
+.bungkusContact{
+  padding-top:8%;
+}
