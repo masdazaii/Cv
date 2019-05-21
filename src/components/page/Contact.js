@@ -7,6 +7,7 @@ import Acc from './asset/Accordionset.js'
 class Contact extends React.Component{
     render(){
         return(
+            <div>
             <div className="bungkusContact">
                 <Container fluid>  
                     <Header as='h1'>Silahkan berikan pendapat anda mengenai saya</Header>
@@ -15,17 +16,27 @@ class Contact extends React.Component{
                         sangat membantu saya, Terima kasih
                     </p>
                 </Container>
+            </div>
                 <Grid stackable columns={2} divided style={{
-                    marginLeft:'10em',
-                    marginRight:'10em',
-                    justifyContent:'center',
+                    margin:'0 10em 0 1em',
+                    width:'100%'
                 }}>
-                    <Grid.Row>
-                        <Grid.Column width={20}>
-                            <Lembar></Lembar>
+                    <Grid.Row style={{
+                        display:'inline-block'
+                    }}>
+                        <Grid.Column width={20} >
+                            <Segment inherit style={{
+                                width:'30em',
+                                float:'right'
+                            }}>
+                            <Lembar ></Lembar>
+                            </Segment>
                         </Grid.Column>
                         <Grid.Column width={20}>
-                            <Acc/>
+                            <Segment inherit style={{
+                                width:'30em',
+                                float:'left'
+                            }}><Acc/></Segment>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -40,6 +51,7 @@ class Contact extends React.Component{
                     </Button.Group>
                     </Grid.Column>
                 </Grid.Row>
+            
             </div>
         )
     }

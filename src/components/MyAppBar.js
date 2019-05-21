@@ -14,12 +14,17 @@ class MyAppBar extends Component{
 
         return (
         <Segment inverted>
+           
             <Menu inverted pointing secondary>
             <Link to='/home'>
             <Menu.Item 
                 name='home' 
                 active={activeItem === 'home'} 
-                onClick={this.handleItemClick} />
+                onClick={this.handleItemClick} 
+                style={{
+                    float:'right',
+                    marginLeft: '1em'
+                }}/>
             </Link>
             <Link to='/profile'>
             <Menu.Item

@@ -4,7 +4,7 @@ import { Tab } from 'semantic-ui-react'
 import { Progress } from 'semantic-ui-react'
 import { List } from 'semantic-ui-react'
 import Experience from './asset/Accordion.js'
-import {Container} from 'semantic-ui-react'
+import gambar from './asset/wa.jpg'
 
 const panes = [
     {
@@ -82,7 +82,7 @@ class Profile extends React.Component{
         return(
             <div>
                 
-                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='small' rounded 
+                <Image src={gambar} size='small' rounded 
                 className = "profilImage" style={{
                     marginLeft:"auto",
                     marginRight:"auto"

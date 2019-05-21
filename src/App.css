@@ -22,19 +22,14 @@
   text-decoration: inherit;
 }
 
-.position{
-  text-align: center;
-  align-items: inherit;
-  margin-left: 35%;
-}
+
 
 .ui.segment{
   display: inline-block;
 }
 
 .ui.stackable.two.column.grid{
-  text-align:center;
-  display: inline-block;
+  display: flex;
   margin-top: 1%;
 }
 
@@ -43,8 +38,10 @@
 }
 
 .ui.inverted.pointing.secondary.menu{
-  float:right;
-  margin-right: 10%;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  width:100%;
 }
 
 .ui.fluid.container{
@@ -62,7 +59,22 @@
   resize: none;
 }
 
+.ui.buttons{
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
 .ui.buttons .button{
   margin:10px 10px 10px 10px;
 }
+
+.ui.form .field{
+  clear: none;
+  width:380px;
+}
+
+
 

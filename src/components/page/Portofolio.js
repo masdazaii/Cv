@@ -22,7 +22,7 @@ class Portofolio extends React.Component{
       }
     
       componentDidMount() {
-        axios.get(`http://my-json-server.typicode.com/masdazaii/APIp/portofolio`)
+        axios.get(`https://my-json-server.typicode.com/masdazaii/APIp/portofolio`)
           .then(res => {
             const informasi = res.data;
             this.setState({ informasi });
@@ -31,8 +31,22 @@ class Portofolio extends React.Component{
       render() {
         return (
             <div>
-                <Grid columns={2} stackable>
-                    <Grid.Row columns={3}>
+                <div className="bungkusContact">
+                    <Container fluid>  
+                        <Header as='h1'>Silahkan berikan pendapat anda mengenai saya</Header>
+                        <p>
+                            Saran,kritik dan masukan anda akan 
+                            sangat membantu saya, Terima kasih
+                        </p>
+                    </Container>
+                </div>
+                <Grid columns={2} stackable style={{
+                    margin:'0 10em 0 1em',
+                    width:'100%'
+                }}>
+                    <Grid.Row columns={3} style={{
+                        display:'inline-block'
+                    }}>
                         { this.state.informasi.map(portofolio =>
                             <Grid.Column>
                                 <Card>
