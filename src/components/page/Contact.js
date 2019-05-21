@@ -1,8 +1,13 @@
 import React from 'react'
-import { Button,Container, Header } from 'semantic-ui-react'
+import { Button,Container, Header,Popup } from 'semantic-ui-react'
 import Lembar from './form.js'
 import { Grid, Segment } from 'semantic-ui-react'
 import Acc from './asset/Accordionset.js'
+
+const style = {
+    borderRadius: 0,
+    opacity: 0.7,
+  }
 
 class Contact extends React.Component{
     render(){
@@ -43,11 +48,36 @@ class Contact extends React.Component{
                 <Grid.Row>
                     <Grid.Column width={8}>
                     <Button.Group>
-                        <Button icon="instagram"></Button>
-                        <Button icon="twitter"></Button>
-                        <Button icon="facebook"></Button>
-                        <Button icon="github"></Button>
-                        <Button icon="mail"></Button>
+                        <Popup
+                            trigger={<Button icon="instagram"/>}
+                            content='Masdazaii'
+                            style={style}
+                            inverted
+                            />
+                            <Popup
+                            trigger={<Button icon="twitter"/>}
+                            content='Masdazai'
+                            style={style}
+                            inverted
+                            />
+                                <Popup
+                            trigger={<Button icon="facebook"/>}
+                            content='Anggit Prayoga'
+                            style={style}
+                            inverted
+                            />
+                            <Popup
+                            trigger={<Button icon="github"/>}
+                            content='Masdazaii'
+                            style={style}
+                            inverted
+                            />
+                            <Popup
+                            trigger={<Button icon="mail"/>}
+                            content='Anggitp07@gmail.com'
+                            style={style}
+                            inverted
+                            />
                     </Button.Group>
                     </Grid.Column>
                 </Grid.Row>

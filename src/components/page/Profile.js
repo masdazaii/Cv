@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'semantic-ui-react'
+import { Image,Icon } from 'semantic-ui-react'
 import { Tab } from 'semantic-ui-react'
 import { Progress } from 'semantic-ui-react'
 import { List } from 'semantic-ui-react'
@@ -7,6 +7,49 @@ import Experience from './asset/Accordion.js'
 import gambar from './asset/wa.jpg'
 
 const panes = [
+    {
+        menuItem: { key: 'user', icon: 'user outline', content: 'Personal information' },
+        render: () => <Tab.Pane>
+                            <List>
+                                <List.Item as='p'>
+                                <Icon name='marker' />
+                                <List.Content>
+                                    <List.Header>Alamat</List.Header>
+                                    <List.Description>
+                                        Jl.Gedong papapk rt04/rw01 Desa Pagerji,Kecammatan Cilongok,Kabupaten Banyumas,Jawa tengah
+                                    </List.Description>
+                                </List.Content>
+                                </List.Item>
+                                <List.Item as='p'>
+                                <Icon name='venus mars' />
+                                <List.Content>
+                                    <List.Header>Statu Menikah</List.Header>
+                                    <List.Description>
+                                        Belum
+                                    </List.Description>
+                                </List.Content>
+                                </List.Item>
+                                <List.Item as='p'>
+                                <Icon name='calendar alternate outline' />
+                                <List.Content>
+                                    <List.Header>Tempat,Tanggal Lahir</List.Header>
+                                    <List.Description>
+                                        Banyumas,7 Mei 2019
+                                    </List.Description>
+                                </List.Content>
+                                </List.Item>
+                                <List.Item as='p'>
+                                <Icon name='group' />
+                                <List.Content>
+                                    <List.Header>Agama</List.Header>
+                                    <List.Description>
+                                        Islam
+                                    </List.Description>
+                                </List.Content>
+                                </List.Item>
+                            </List>
+                      </Tab.Pane>,
+    },
     {
       menuItem: { key: 'Skill', icon: 'laptop', content: 'Skill' },
       render: () => <Tab.Pane>
